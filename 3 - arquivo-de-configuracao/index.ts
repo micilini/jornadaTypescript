@@ -1,0 +1,1 @@
+console.log('Dê uma olhada no arquivo tsconfig.json =)');
