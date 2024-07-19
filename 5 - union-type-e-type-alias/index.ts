@@ -81,3 +81,15 @@ function retornoDois(idade: number | string): valores{
 
 let dadoDois: valores = retorno(25);
 dado = retorno("25");
+
+//Type Alias como um Objeto
+
+type tipoPessoa = {
+    nome: string,
+    idade: number
+}
+  
+const dadosPessoa: tipoPessoa = {
+    nome: "Micilini Roll",
+    idade: 23,
+}
