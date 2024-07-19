@@ -17,6 +17,17 @@ mostraIdade("12");
 
 const array: Array<number | string> = [22, "Roll", "Mic", "Linth", 980];
 
+function retorno(idade: number | string): number | string{
+    if(idade === 25){
+        return 25;
+    }
+    //Se não é número é string, então:
+    return "25";
+}
+
+let dado: number | string = retorno(25);
+dado = retorno("25");
+
 //Union Type com Condicionais
 
 function mostraIdadeDois(idade: number | string){
@@ -59,3 +70,14 @@ let minhaVariavel: valores = 5;
 
 minhaVariavel = "Rolls";
 minhaVariavel = true;
+
+function retornoDois(idade: number | string): valores{
+    if(idade === 25){
+        return 25;
+    }
+    //Se não é número é string, então:
+    return "25";
+}
+
+let dadoDois: valores = retorno(25);
+dado = retorno("25");
