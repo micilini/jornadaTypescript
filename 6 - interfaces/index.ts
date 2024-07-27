@@ -59,3 +59,82 @@ interface Usuario{
     //Crie um método opcional
     saudar?(): string
 }
+
+//Propriedade readonly
+
+interface Livro {
+    readonly titulo: string;
+    autor: string;
+    anoPublicacao?: number; // Opcionais
+  }
+  
+  const livro: Livro = {
+    titulo: 'O Guia do Mochileiro das Galáxias',
+    autor: 'Douglas Adams'
+  };
+  
+  // livro.titulo = 'Outro Título'; // Erro: Propriedade somente leitura
+  livro.autor = "Fernando";
+
+//Usando o Index Signature dentro de uma Interface
+
+interface NomeDaInterface{
+    [index: string]: number
+}
+
+let meuObjeto: NomeDaInterface = {
+    micilini: 10,
+    roll: 65
+}
+
+let meuObjetoDois: NomeDaInterface = {
+    roll: 988,
+    micilini: 1007
+}
+
+//Heranças
+
+interface Animal{
+    nome: string,
+    classe: string
+}
+
+interface SuperAnimal extends Animal{
+    poder: string[],
+    rankDeHeroi: number
+}
+
+const peixe: SuperAnimal = {
+    nome: 'Peixe',
+    classe: 'Do Mar',
+    poder: ['Respirar fora da agua', 'Conversar igual humano', 'Voar até a extratosfera sem danos'],
+    rankDeHeroi: 32
+}
+
+console.log(peixe);
+
+//Interseção com Interfaces:
+
+// Definindo dois tipos
+type Humano = {
+    nome: string;
+    idade: number;
+  };
+  
+  type Trabalhador = {
+    cargo: string;
+    salario: number;
+  };
+  
+  // Criando um tipo de interseção
+  type Funcionario = Humano & Trabalhador;
+  
+  // Criando um objeto que corresponde ao tipo Funcionario
+  const funcionario: Funcionario = {
+    nome: 'Maria',
+    idade: 30,
+    cargo: 'Desenvolvedora',
+    salario: 5000
+  };
+  
+  console.log(funcionario);
