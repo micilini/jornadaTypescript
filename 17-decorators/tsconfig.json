@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "es6",                         // Define a versão do JavaScript alvo
+      "module": "commonjs",                    // Define o sistema de módulos
+      "experimentalDecorators": true,          // Habilita o suporte a decoradores
+      "emitDecoratorMetadata": true            // Gera metadados de decoração para decoradores
+    },
+    "include": [
+      "src/**/*"  // Inclua seus arquivos de código-fonte aqui
+    ],
+    "exclude": [
+      "node_modules"  // Exclua a pasta de dependências
+    ]
+}
+  
